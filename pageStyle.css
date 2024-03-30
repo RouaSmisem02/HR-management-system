@@ -1,0 +1,70 @@
+/* Resetting default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding-bottom: 50px; /* Add some padding at the bottom */
+}
+
+header, footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+form {
+    max-width: 600px; /* Set a max width for the form */
+    margin: 2rem auto; /* Center the form in the page */
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align cards to the start of the main container */
+    gap: 20px; /* Gap between cards */
+    padding: 0 2rem; /* Padding on the sides */
+}
+
+.employee-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Three cards per row with gap */
+    margin-bottom: 20px;
+}
+
+.employee-card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.info-container {
+    padding: 15px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .employee-card {
+        width: calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .employee-card {
+        width: 100%; /* Full width cards on very small screens */
+    }
+}
