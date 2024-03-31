@@ -11,15 +11,17 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
 }
 
-header, footer {
+header,
+footer {
     background-color: #007bff;
     color: rgb(9, 3, 66);
     text-align: center;
     padding: 1rem 0;
 }
+
 header {
     display: flex;
     align-items: center;
@@ -38,22 +40,22 @@ header nav {
 
 header nav a {
     margin-left: 20px;
-    margin-right: 10px; 
+    margin-right: 10px;
     text-decoration: none;
 }
 
 nav a {
-    color: #020842; 
-    text-decoration: none; 
+    color: #020842;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 form {
-    max-width: 800PX; 
-    margin: 2rem auto; 
+    max-width: 800PX;
+    margin: 2rem auto;
     padding: 1rem;
     background-color: #fff;
     border-radius: 8px;
@@ -84,16 +86,20 @@ form button {
 main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align cards to the start of the main container */
-    gap: 20px; /* Gap between cards */
-    padding: 0 2rem; /* Padding on the sides */
+    justify-content: flex-start;
+    /* Align cards to the start of the main container */
+    gap: 20px;
+    /* Gap between cards */
+    padding: 0 2rem;
+    /* Padding on the sides */
 }
 
 .employee-card {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px); /* Three cards per row with gap */
+    width: calc(33.333% - 20px);
+    /* Three cards per row with gap */
     margin-bottom: 20px;
 }
 

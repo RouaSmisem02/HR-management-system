@@ -1,5 +1,5 @@
 'use strict';
-function Employee (employeeId, fullName, department, level, imgUrl){
+function Employee(employeeId, fullName, department, level, imgUrl) {
     this.employeeId = employeeId
     this.fullName = fullName
     this.department = department
@@ -7,50 +7,50 @@ function Employee (employeeId, fullName, department, level, imgUrl){
     this.imgUrl = imgUrl
 }
 
-Employee.prototype.calculateSalary = function(){
+Employee.prototype.calculateSalary = function () {
     var min, max
     if (this.level == "Senior") {
         min = 1500
         max = 2000
-    }else if(this.level == "Mid-Senior"){
+    } else if (this.level == "Mid-Senior") {
         min = 1000
         max = 1500
-    }else if(this.level == "Junior"){
+    } else if (this.level == "Junior") {
         min = 500
         max = 1000
-    }else{
+    } else {
         console.log("Invalid employee level")
     }
 
     return Math.floor(Math.random() * (max - min) + min)
 }
 
-Employee.prototype.calculateNetSalary = function(){
+Employee.prototype.calculateNetSalary = function () {
     const salary = this.calculateSalary()
     const tax = 0.075
-    const netSalary = salary - (salary*tax) //This the website that I take the formula from it (https://goniyo.com/salary-calculator/) 
-    this.salary = netSalary   
+    const netSalary = salary - (salary * tax) //This the website that I take the formula from it (https://goniyo.com/salary-calculator/) 
+    this.salary = netSalary
 }
 
-Employee.prototype.render = function() {
+Employee.prototype.render = function () {
     const container = document.getElementById('employees');
     console.log(container);
-   
+
     const divEl = document.createElement('div');
     container.appendChild(divEl);
-   
+
     const nameEl = document.createElement('h3');
     divEl.appendChild(nameEl);
     nameEl.textContent = this.fullName;
-    
+
     const salaryEl = document.createElement('p');
     divEl.appendChild(salaryEl);
     salaryEl.textContent = `Net Salary: ${this.salary}$`;
-    
+
     const hrEl = document.createElement('hr');
     divEl.appendChild(hrEl);
 }
-Employee.prototype.render = function() {
+Employee.prototype.render = function () {
     const container = document.getElementById('employees');
     const card = document.createElement('div');
     card.className = 'employee-card';
@@ -100,22 +100,22 @@ HadiEmployee.render()
 
 /////////////Lab08/////////////
 
-function generateEmployeeId (){
+function generateEmployeeId() {
     return Math.floor(1000 + Math.random() * 9000)
 }
 
 let employeeForm = document.getElementById("employeeForm")
 
 employeeForm.addEventListener('submit', addNewEmployeeHandler)
-function addNewEmployeeHandler (event){
+function addNewEmployeeHandler(event) {
     event.preventDefault();
     const employeeId = generateEmployeeId();
     let fullName = document.getElementById('fullName').value;
     let department = document.getElementById('department').value;
     let level = document.getElementById('level').value;
     let imageUrl = document.getElementById('imageUrl').value;
-    
+
     let newEmployee = new Employee(employeeId, fullName, department, level, imageUrl);
     newEmployee.calculateNetSalary();
-    newEmployee.render(); 
+    newEmployee.render();
 }

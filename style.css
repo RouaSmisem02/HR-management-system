@@ -4,47 +4,50 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgb(9, 3, 66);
     overflow: hidden;
-    margin: 20px; 
-    width: 250px; 
+    margin: 20px;
+    width: 250px;
     position: relative;
-   
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .employee-card .img-container {
     background-color: #BAFF6B;
     border-radius: 50%;
-    width: 120px; 
+    width: 120px;
     height: 120px;
-   
-    margin: 10px auto 10px; 
+
+    margin: 10px auto 10px;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    border: 5px solid rgb(9, 3, 66); 
-    box-sizing: border-box; 
-    position: relative; 
-    z-index: 2; 
+    justify-content: center;
+    border: 5px solid rgb(9, 3, 66);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
     object-fit: cover;
 }
+
 .employee-card .img-container img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 50%; 
+    border-radius: 50%;
 
 
-.employee-card .info-container {
-    padding: 20px;
-    text-align: center; 
-    color: #333; 
-    font-family: 'Arial', sans-serif; 
-    margin-top: 60px; 
-    z-index: 1; 
-    background-color: #FFFFFF; 
-    width: 100%; 
-}
-.employee-card p {
-    margin: 5px 0; 
-}
+    .employee-card .info-container {
+        padding: 20px;
+        text-align: center;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+        margin-top: 60px;
+        z-index: 1;
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+
+    .employee-card p {
+        margin: 5px 0;
+    }
 }
