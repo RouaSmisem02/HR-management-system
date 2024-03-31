@@ -8,49 +8,69 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pageStyle.css">
 
+
+
 </head>
 
 <body>
     <header>
+        <div>
+            <h1><img src="img/human-resources_4126442.png" alt=" " height="50">
+                <span>HR Management System</span>
+            </h1>
+        </div>
+
+        <nav>
+            <a href="index.html" target="_blank" title="Go To Home Page">Home Page</a> |
+
+            <a href="accounting.html" target="_blank" title="Go To Accounting Page">Accounting</a>
+        </nav>
     </header>
-    
-    <main id="employees">  
-    </main>
+    <br/>
     <section>
         <form id="employeeForm">
-       <fieldset>
-           <legend>Add New Employee</legend>
-           <label for="fullName">Full Name:</label>
-           <input type="text" id="fullName" name="fullName" required>
-           <br/>
-           <br/>
-           <label for="department">Department:</label>
-           <select id="department" name="department">
-               <option value="Administration">Administration</option>
-               <option value="Marketing">Marketing</option>
-               <option value="Development">Development</option>
-               <option value="Finance">Finance</option>
-           </select>
-           <br/>
-           <br/>
-           <label for="level">Level:</label>
-           <select id="level" name="level">
-               <option value="Junior">Junior</option>
-               <option value="Mid-Senior">Mid-Senior</option>
-               <option value="Senior">Senior</option>
-           </select>
-           <br/>
-           <br/>
-           <label for="imageUrl">Image URL:</label>
-           <input type="text" id="imageUrl" name="imageUrl">
-           <br/>
-           <br/>
-           <button type="submit">Add</button>
-       </fieldset>
-       </form>
+            <fieldset>
+                <legend>Add New Employee</legend>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <br />
+                <br />
+                <label for="department">Department:</label>
+                <select id="department" name="department">
+                    <option value="Administration">Administration</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Development">Development</option>
+                    <option value="Finance">Finance</option>
+                </select>
+                <br />
+                <br />
+                <label for="level">Level:</label>
+                <select id="level" name="level">
+                    <option value="Junior">Junior</option>
+                    <option value="Mid-Senior">Mid-Senior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+                <br />
+                <br />
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl">
+                <br />
+                <br />
+                <button type="submit">Add</button>
+            </fieldset>
+        </form>
     </section>
+
+    <main id="employees">
+    </main>
+
     <footer>
         <p>&copy; 2024 Smisem. All rights reserved.</p>
+        <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank" title="Facebook"><img src="img/facebook_2504903.png" alt="Facebook" style="width: 25px;"></a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram"><img src="img/instagram_2504918.png" alt="Instagram" style="width: 25px;"></a>
+        <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><img src="img/linkedin_2504923.png" alt="LinkedIn" style="width: 25px;"></a>
+        </div>
     </footer>
     <script src="app.js">
 
