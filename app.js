@@ -32,24 +32,24 @@ Employee.prototype.calculateNetSalary = function(){
     this.salary = netSalary   
 }
 
-// Employee.prototype.render = function() {
-//     const container = document.getElementById('employees');
-//     console.log(container);
+Employee.prototype.render = function() {
+    const container = document.getElementById('employees');
+    console.log(container);
    
-//     const divEl = document.createElement('div');
-//     container.appendChild(divEl);
+    const divEl = document.createElement('div');
+    container.appendChild(divEl);
    
-//     const nameEl = document.createElement('h3');
-//     divEl.appendChild(nameEl);
-//     nameEl.textContent = this.fullName;
+    const nameEl = document.createElement('h3');
+    divEl.appendChild(nameEl);
+    nameEl.textContent = this.fullName;
     
-//     const salaryEl = document.createElement('p');
-//     divEl.appendChild(salaryEl);
-//     salaryEl.textContent = `Net Salary: ${this.salary}$`;
+    const salaryEl = document.createElement('p');
+    divEl.appendChild(salaryEl);
+    salaryEl.textContent = `Net Salary: ${this.salary}$`;
     
-//     const hrEl = document.createElement('hr');
-//     divEl.appendChild(hrEl);
-// }
+    const hrEl = document.createElement('hr');
+    divEl.appendChild(hrEl);
+}
 Employee.prototype.render = function() {
     const container = document.getElementById('employees');
     const card = document.createElement('div');
@@ -75,13 +75,13 @@ Employee.prototype.render = function() {
     card.appendChild(infoContainer);
     container.appendChild(card);
 };
-let GhaziEmployee = new Employee(1000, 'Ghazi Samer', 'Administration', 'Senior', 'image-path');
-let LanaEmployee = new Employee(1001, 'Lana Ali', 'Finance', 'Senior', 'image-path');
-let TamaraEmployee = new Employee(1002, 'Tamara Ayoub', 'Marketing', 'Senior', 'image-path');
-let SafiEmployee = new Employee(1003, 'Safi Walid', 'Administration', 'Mid-Senior', 'image-path');
-let OmarEmployee = new Employee(1004, 'Omar Zaid', 'Development', 'Senior', 'image-path');
-let RanaEmployee = new Employee(1005, 'Rana Saleh', 'Development', 'Junior', 'image-path');
-let HadiEmployee = new Employee(1006, 'Hadi Ahmad', 'Finance', 'Mid-Senior', 'image-path');
+let GhaziEmployee = new Employee(1000, 'Ghazi Samer', 'Administration', 'Senior', 'img/Ghazi.jpg');
+let LanaEmployee = new Employee(1001, 'Lana Ali', 'Finance', 'Senior', 'img/Lana.jpg');
+let TamaraEmployee = new Employee(1002, 'Tamara Ayoub', 'Marketing', 'Senior', 'img/Tamara.jpg');
+let SafiEmployee = new Employee(1003, 'Safi Walid', 'Administration', 'Mid-Senior', 'img/Safi.jpg');
+let OmarEmployee = new Employee(1004, 'Omar Zaid', 'Development', 'Senior', 'img/Omar.jpg');
+let RanaEmployee = new Employee(1005, 'Rana Saleh', 'Development', 'Junior', 'img/Rana.jpg');
+let HadiEmployee = new Employee(1006, 'Hadi Ahmad', 'Finance', 'Mid-Senior', 'img/Hadi.jpg');
 
 GhaziEmployee.calculateNetSalary()
 GhaziEmployee.render()

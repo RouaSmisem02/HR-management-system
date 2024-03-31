@@ -2,12 +2,12 @@
     grid-template-columns: repeat(2, 1fr);
     background-color: #FFFFFF;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(9, 3, 66);
     overflow: hidden;
-    margin: 20px; /* Adjusted margin for spacing between cards */
-    width: 250px; /* Adjust width as needed */
+    margin: 20px; 
+    width: 250px; 
     position: relative;
-    /* Added for flexbox alignment if cards are in a flex container */
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,34 +15,36 @@
 .employee-card .img-container {
     background-color: #BAFF6B;
     border-radius: 50%;
-    width: 120px; /* Adjust size as needed */
+    width: 120px; 
     height: 120px;
-    /* Center the image container within the card */
-    margin: -60px auto 10px; /* Negative margin to lift the image container up */
+   
+    margin: 10px auto 10px; 
     display: flex;
     align-items: center;
-    justify-content: center; /* Center content horizontally */
-    border: 5px solid rgb(8, 66, 3); /* Adjust to match background color */
-    box-sizing: border-box; /* Keeps dimensions including border */
-    position: relative; /* Needed to position it above the card */
-    z-index: 2; /* Make sure it's above the info container */
+    justify-content: center; 
+    border: 5px solid rgb(9, 3, 66); 
+    box-sizing: border-box; 
+    position: relative; 
+    z-index: 2; 
+    object-fit: cover;
 }
 .employee-card .img-container img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 50%; /* Make image round */
-}
+    border-radius: 50%; 
+
+
 .employee-card .info-container {
     padding: 20px;
-    text-align: center; /* Center the text */
-    color: #333; /* Dark text color for readability */
-    font-family: 'Arial', sans-serif; /* Example font */
-    /* This will position the info container below the image container */
-    margin-top: 60px; /* Push down the info container to make space for the image container */
-    z-index: 1; /* Lower than the image container */
-    background-color: #FFFFFF; /* Match the card background color */
-    width: 100%; /* Ensure it spans the width of the card */
+    text-align: center; 
+    color: #333; 
+    font-family: 'Arial', sans-serif; 
+    margin-top: 60px; 
+    z-index: 1; 
+    background-color: #FFFFFF; 
+    width: 100%; 
 }
 .employee-card p {
-    margin: 5px 0; /* Spacing between paragraphs */
+    margin: 5px 0; 
+}
 }

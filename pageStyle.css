@@ -11,23 +11,74 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
-    padding-bottom: 50px; /* Add some padding at the bottom */
+    padding-bottom: 50px; 
 }
 
 header, footer {
     background-color: #007bff;
-    color: white;
+    color: rgb(9, 3, 66);
     text-align: center;
     padding: 1rem 0;
 }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    margin-left: 20px;
+    margin-right: 10px; 
+    text-decoration: none;
+}
+
+nav a {
+    color: #020842; 
+    text-decoration: none; 
+}
+
+nav a:hover {
+    color: #ffffff; 
+}
 
 form {
-    max-width: 600px; /* Set a max width for the form */
-    margin: 2rem auto; /* Center the form in the page */
+    max-width: 800PX; 
+    margin: 2rem auto; 
     padding: 1rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section form input[type="text"],
+section form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #09024d;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 main {
@@ -55,16 +106,4 @@ main {
 .info-container {
     padding: 15px;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .employee-card {
-        width: calc(50% - 20px); /* Two cards per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .employee-card {
-        width: 100%; /* Full width cards on very small screens */
-    }
 }
