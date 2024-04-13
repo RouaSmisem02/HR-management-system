@@ -6,6 +6,7 @@ function Employee(employeeId, fullName, department, level, imgUrl) {
     this.department = department;
     this.level = level;
     this.imgUrl = imgUrl;
+    this.calculateNetSalary();  // Calculate net salary during initialization
     employeeArr.push(this);
 }
 Employee.prototype.calculateSalary = function() {
@@ -21,7 +22,7 @@ Employee.prototype.calculateSalary = function() {
         max = 1000;
     } else {
         console.error("Invalid employee level");
-        return 0;  
+        return 0;  // Return 0 if level is incorrect
     }
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -30,27 +31,28 @@ Employee.prototype.calculateNetSalary = function() {
     const tax = 0.075;
     const netSalary = salary - (salary * tax);
     this.salary = netSalary;
-}
+};
 function render() {
     const container = document.getElementById('employees');
-    container.innerHTML = '';  
+    container.innerHTML = '';  // Clear existing content
     for (let i = 0; i < employeeArr.length; i++) {
+        const employee = employeeArr[i];
         const card = document.createElement('div');
         card.className = 'employee-card';
         const imgContainer = document.createElement('div');
         imgContainer.className = 'img-container';
         const img = document.createElement('img');
-        img.src = employeeArr[i].imgUrl;
-        img.alt = `Picture of ${employeeArr[i].fullName}`;
+        img.src = employee.imgUrl;
+        img.alt = `Picture of ${employee.fullName}`;
         imgContainer.appendChild(img);
         const infoContainer = document.createElement('div');
         infoContainer.className = 'info-container';
         const nameId = document.createElement('p');
-        nameId.textContent = `Name: ${employeeArr[i].fullName} - ID: ${employeeArr[i].employeeId}`;
+        nameId.textContent = `Name: ${employee.fullName} - ID: ${employee.employeeId}`;
         const departmentLevel = document.createElement('p');
-        departmentLevel.textContent = `Department: ${employeeArr[i].department} - Level: ${employeeArr[i].level}`;
+        departmentLevel.textContent = `Department: ${employee.department} - Level: ${employee.level}`;
         const salary = document.createElement('p');
-        salary.textContent = `Salary: $${employeeArr[i].salary.toFixed(2)}`;
+        salary.textContent = `Salary: $${employee.salary.toFixed(2)}`;
         infoContainer.appendChild(nameId);
         infoContainer.appendChild(departmentLevel);
         infoContainer.appendChild(salary);
@@ -74,7 +76,6 @@ function getEmployee() {
 function init() {
     getEmployee();
     if (employeeArr.length == 0) {
-        
         new Employee(1000, 'Ghazi Samer', 'Administration', 'Senior', 'img/Ghazi.jpg');
         new Employee(1001, 'Lana Ali', 'Finance', 'Senior', 'img/Lana.jpg');
         new Employee(1002, 'Tamara Ayoub', 'Marketing', 'Senior', 'img/Tamara.jpg');
@@ -102,4 +103,4 @@ function addNewEmployeeHandler(event) {
 function generateEmployeeId() {
     return Math.floor(1000 + Math.random() * 9000);
 }
-init(); 
+init();
