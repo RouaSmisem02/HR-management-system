@@ -30,7 +30,7 @@ function calculateDepartmentStats(employees) {
     return departments;
 }
 function renderTable(departments) {
-    var tableContainer = document.getElementById('employee-table'); 
+    var tableContainer = document.getElementById('employee-table');
     var table = document.createElement('table');
     table.style.width = '80%';
     table.style.margin = '20px auto';
@@ -58,7 +58,7 @@ function renderTable(departments) {
     tfoot.innerHTML = '<tr style="background-color: #28A745; color: white;"><th>Total</th><th>' + totalEmployees + '</th><th>$' + totalSalary.toFixed(2) + '</th><th>$' + averageSalaryAll.toFixed(2) + '</th></tr>';
     tfoot.style.textAlign = 'center';
     table.appendChild(tfoot);
-    tableContainer.appendChild(table); 
+    tableContainer.appendChild(table);
 }
 document.addEventListener('DOMContentLoaded', function() {
     var employees = getEmployeesFromStorage();
